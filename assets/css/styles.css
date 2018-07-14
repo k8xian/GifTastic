@@ -1,0 +1,167 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    background-image: URL('../images/background.jpg');
+    background-size: cover;
+    background-position: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .container {
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+  }
+  
+.row {
+    padding: 0;
+  }
+  
+.container .row.header {
+    flex: 0 1 100px;
+    padding: 0 20px;
+    /* The above is shorthand for:
+    flex-grow: 0,
+    flex-shrink: 1,
+    flex-basis: auto
+    */
+}
+  
+.container .row.content {
+    flex:1;
+    padding: 0 20px;
+  }
+  
+ .row.footer {
+    flex: 0 1 72px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .prompt {
+      max-width: 600px;
+      width: 86%;
+      margin: 20px 0;
+      padding: 20px;
+      overflow: scroll;
+  }
+
+  .gifContainer {
+    width: 86%;
+    margin: 20px 0;
+    padding: 20px;
+    overflow: scroll;
+  }
+  
+  .gifs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .gifImage {
+    flex: 1 1 auto;
+    cursor: pointer;
+    transition-property: opacity;
+    transition-duration: 500ms;
+    opacity: .75;
+  }
+
+  .gifImage:hover {
+  opacity: 1;
+  }
+
+  .gifBlock {
+    margin: 30px 20px 0 0 ;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .gifRating {
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  h1 {
+    font-family: 'Black Ops One', cursive;
+    font-size: 4em;
+    margin: 40px 0 0 20px;
+  }
+
+  h3 {
+      margin: -5px 0 0 30px;
+      font-size: .9em;
+  }
+
+  input[type=text] {
+    display: block;
+    background-color: transparent;
+    border: 1px solid white;
+    margin-top: 20px;
+    color: white;
+    padding: 10px;
+    width: 222px;
+  }
+
+  label {
+    display: block;
+  }
+
+  button, input[type=submit], input[type=reset]  {
+      width: 74px;
+      background-color: transparent;
+      border: 1px solid white;
+      margin-top: 20px;
+      color: white;
+      padding: 10px;
+      font-family: 'Roboto Slab', serif;
+      cursor: pointer;
+      transition: background-color 1000ms ease-in-out;
+      transition: flex-grow 500ms ease-in-out;
+      flex-shrink: 1;
+      overflow: hidden;
+      flex-grow: 1;
+  }
+
+
+
+
+  input[type=submit]:hover {
+    background-color: rgba(255,255,255,.15);
+  }
+
+  input[type=reset]:hover {
+    background-color: rgba(255,255,255,.15);
+  }
+
+  button:hover {
+      background-color: rgba(255,255,255,.15);
+      flex-grow: 4;
+  }
+
+  .buttons {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      width: 246px;
+      flex-direction: row;
+  }
+
+  .portfolio-link {
+    cursor: pointer;
+    text-decoration: none;
+    color: aquamarine;
+    margin-top: 8px;
+    display: inline-block;
+    transition-property: color;
+    transition-duration: 1s;
+  }
+
+  .portfolio-link:hover {
+    color: #51ab8d;
+  }

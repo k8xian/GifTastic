@@ -165,3 +165,21 @@ body {
   .portfolio-link:hover {
     color: #51ab8d;
   }
+
+  .download-button {
+    float: left;
+    background-color: aquamarine;
+    padding: 7px 18px;
+    color: black;
+    z-index: 1;
+    display: block;
+    margin: 5px -40% 0 5px;
+    position: relative;
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 1s;
+    text-decoration: none;
+  }
+  .download-button:hover {
+    background-color: #51ab8d;
+  }

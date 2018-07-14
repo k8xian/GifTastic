@@ -1,6 +1,7 @@
 //getting ready
 $("document").ready(function () {
     
+    //gif variables
     var topics = "";
     var topicArray = ["pusheen", "grumpy cat", "simon's cat"];
     var buttonGrp = $(".buttons");
@@ -8,15 +9,13 @@ $("document").ready(function () {
     var getGifTopic = "";
     var searchLimit = 10;
 
-    //gif-related variables
-    //topic
-    //rating
 
 //initial function for rendering on screen - later to be used with local storage
 function initialButtons() {
     for (var i = 0; i < topicArray.length; i++) {
         var gifButton = $("<button>");
 
+        ///rendering initial buttons
         gifButton.text(topicArray[i]);
         gifButton.attr("data-topic",topicArray[i]);
         buttonGrp.prepend(gifButton);
@@ -82,13 +81,22 @@ function getGifs() {
                 console.log("is this the problem? " + staticURL);
                 var gifURL = "https://media1.giphy.com/media/" + results[i].id + "/200.gif";
                 console.log(gifURL);
-                var rating = "rating :" + results[i].rating;
+                var rating = "rating: " + results[i].rating;
                 console.log(rating);
 
                 //creating DOM elements
                 var gifBlock = $("<div>").addClass("gifBlock");
                 var gifImage = $("<img>");
                 var gifRating = $("<p>");
+                var downloadBtn =$('<a href="'
+                                + gifURL
+                                + '" class="download-button" target="_blank" download="'
+                                + gifURL
+                                +'">').text("download");
+                
+                //saving in case I break everything var downloadBtn = $("<a download>").addClass("download-button");
+
+                //saving work in case this breaksdownloadBtn.attr("href", results[i].images.fixed_height.url).attr("target", "_blank").text("download");
 
                 //adding image assets to gif Image
                 gifImage.attr("data-still", staticURL);
@@ -101,8 +109,10 @@ function getGifs() {
                 gifRating.text(rating);
                 gifRating.addClass("gifRating");
 
+                gifBlock.append(downloadBtn);
                 gifBlock.append(gifImage);
                 gifBlock.append(gifRating);
+                
 
                 gifGrp.prepend(gifBlock);
 
@@ -112,8 +122,8 @@ function getGifs() {
 
 };
 
-//on click of button grabs 10 static gif images and displays with rating
 
+//on click of button grabs 10 static gif images and displays with rating
 $(document.body).on("click", "button", function() {
     getGifTopic = $(this).attr("data-topic");
     gifGrp.empty();
@@ -121,15 +131,18 @@ $(document.body).on("click", "button", function() {
 });
 
 //gif animatess onclick
-
 $(document.body).on("click", ".gifImage", function() {
     var state = $(this).attr("data-state");
 
+    //if still,
     if(state === "still") {
+        //use the data-animate value as the src value to get it to display the animated gif
        $(this).attr("src", $(this).attr("data-animate"));
+       //change the data-state to animate so that it knows to stop it on the next click
        $(this).attr("data-state", "animate");
        console.log(state);
      } else {
+        //the reverse of what was above
        $(this).attr("src", $(this).attr("data-still"));
        $(this).attr("data-state", "still");
      }

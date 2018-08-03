@@ -1,7 +1,9 @@
 # GifTastic
 * By Kate Christian
-* **k8xian.github.io**
+* k8xian.github.io
 * For Northwestern University's Full Stack Flex Code Bootcamp
+
+**Deployment:** [k8xian.github.io/Giftastic](https://k8xian.github.io/Giftastic)
 
 ## instructions
 * click on one of the buttons to generate gifs on that topic

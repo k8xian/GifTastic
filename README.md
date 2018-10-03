@@ -3,7 +3,7 @@
 * k8xian.github.io
 * For Northwestern University's Full Stack Flex Code Bootcamp
 
-**Deployment:** [k8xian.github.io/Giftastic](https://k8xian.github.io/Giftastic)
+**Deployment:** [giphtastic-k8xian.herokuapp.com](https://giphtastic-k8xian.herokuapp.com/)
 
 ## instructions
 * click on one of the buttons to generate gifs on that topic

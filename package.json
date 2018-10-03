@@ -1,0 +1,30 @@
+{
+  "name": "giphtastic",
+  "version": "1.0.0",
+  "description": "A gif api search app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k8xian/Giftastic.git"
+  },
+  "author": "Kate Christian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/k8xian/Giftastic/issues"
+  },
+  "homepage": "https://github.com/k8xian/Giftastic#readme",
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "request": "^2.88.0"
+  }
+}
